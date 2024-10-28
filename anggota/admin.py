@@ -12,19 +12,19 @@ from transaksi.models import transaksi
 
 # Register your models here.
 class anggotaadmin(admin.ModelAdmin) :
-    list_display = ["nim", "nama", "alamat"]
+    list_display = ["nim_anggota", "nama_anggota", "alamat"]
 admin.site.register(anggota,anggotaadmin)
 
 class bukuadmin(admin.ModelAdmin) :
-    list_display = ["judul_buku", "kategori"]
+    list_display = ["judul_buku", "kategori_buku"]
 admin.site.register(buku,bukuadmin)
 
 class daftaradmin(admin.ModelAdmin) :
-    list_display = ["nama", "tgl_kunjungan"]
+    list_display = ["nama_anggota", "tgl_kunjungan"]
 admin.site.register(daftar_hadir,daftaradmin)
 
 class dendaadmin(admin.ModelAdmin) :
-    list_display = ["nim", "nama", "denda"]
+    list_display = ["nim_anggota", "nama_anggota", "denda"]
 admin.site.register(denda,dendaadmin)
 
 class jenisadmin(admin.ModelAdmin) :
@@ -32,11 +32,11 @@ class jenisadmin(admin.ModelAdmin) :
 admin.site.register(jenis_denda,jenisadmin)
 
 class peminjamanadmin(admin.ModelAdmin) :
-    list_display = ["nama", "tgl_pinjam", "tgl_kembali", "judul_buku"]
+    list_display = ["nama_anggota", "tgl_pinjam", "tgl_kembali", "judul_buku"]
 admin.site.register(peminjaman,peminjamanadmin)
 
 class petugasadmin(admin.ModelAdmin) :
-    list_display = ["nim", "nama_petugas"]
+    list_display = ["nim_petugas", "nama_petugas"]
 admin.site.register(petugas,petugasadmin)
 
 class transaksiadmin(admin.ModelAdmin) :
